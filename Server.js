@@ -59,7 +59,7 @@ app.post("/api/students/login", async (req, res) => {
 
 // Get all students with profilePic
 app.get("/api/students", async (req, res) => {
-  const students = await Student.find({ profilePic: { $exists: true, $ne: null } });
+  const students = await Student.find();
   res.json(students);
 });
 
